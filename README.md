@@ -112,6 +112,14 @@ I hold an **MS in Data Science from NED University**, where my research focused 
 <img src="https://streak-stats.demolab.com?user=SirAseef&theme=tokyonight&hide_border=true" />
 <br/>
 <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=SirAseef&theme=tokyo-night&hide_border=true" />
+
+<br/>
+<img src="https://github-profile-trophy.vercel.app/?username=SirAseef&theme=tokyonight&no-frame=true&no-bg=true&margin-w=6&row=1" />
+<br/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SirAseef/SirAseef/output/github-snake-dark.svg" />
+  <img alt="contribution snake" src="https://raw.githubusercontent.com/SirAseef/SirAseef/output/github-snake.svg" />
+</picture>
 </div>
 
 ---
