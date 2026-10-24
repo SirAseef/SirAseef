@@ -17,8 +17,8 @@ from collections import Counter
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 import gen  # noqa: E402  (shared palette, frame, motif and chart helpers)
-from gen import (BG, G1, G2, G3, INK, MUTED, LINE, PLAT, STEEL, CARD, CARD2, SEAL_DEFS, COORDS,
-                 frame, text, chip, esc, eye, mini_capstone, light_rays, guilloche, MONTHS)
+from gen import (BG, G1, G2, G3, INK, MUTED, LINE, PLAT, STEEL, CARD, CARD2,
+                 frame, text, chip, esc, alpha_mark, orbit_ring, rule, head, lift, MONTHS)
 
 PKT = dt.timezone(dt.timedelta(hours=5), "PKT")
 USER = os.environ.get("GH_USER", "SirAseef")
@@ -28,6 +28,7 @@ UA = {"User-Agent": f"{USER}-profile-live-cards"}
 
 CITIES = [("Karachi", 24.8607, 67.0011), ("Lahore", 31.5204, 74.3587), ("Islamabad", 33.6844, 73.0479),
           ("Jacobabad", 28.2769, 68.4514), ("Sukkur", 27.7052, 68.8574)]
+REGION = {"Karachi": "Sindh", "Lahore": "Punjab", "Islamabad": "Capital Territory", "Jacobabad": "Sindh", "Sukkur": "Sindh"}
 WMO = {0: "clear sky", 1: "mainly clear", 2: "partly cloudy", 3: "overcast", 45: "fog", 48: "fog",
        51: "light drizzle", 53: "drizzle", 55: "dense drizzle", 61: "light rain", 63: "rain", 65: "heavy rain",
        66: "freezing rain", 67: "freezing rain", 71: "light snow", 73: "snow", 75: "heavy snow", 80: "rain showers",
@@ -118,8 +119,8 @@ def greeting_card(now, karachi=None):
         g, tint = "Good night from Karachi", PLAT
     b = []
     b.append(f'<circle cx="110" cy="75" r="90" fill="{tint}" opacity=".10" filter="url(#soft)"/>')
-    b.append(light_rays(110, 72, 28, 26, 120, True, 150, .9))
-    b.append(mini_capstone(110, 84, .52))
+    b.append(orbit_ring(110, 75, 58, dur=160, ticks=48, major=4))
+    b.append(alpha_mark(110, 75, .55, node=True))
     b.append(gen.shine_text(210, 70, g, 34, 800, width=640, glow=False))
     wd = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"][now.weekday()]
     b.append(text(212, 102, f"{wd} · {now.day} {MONTHS[now.month-1]} {now.year}  ·  thanks for stopping by.", 15.5, INK, 500))
@@ -127,8 +128,8 @@ def greeting_card(now, karachi=None):
         b.append(f'<text x="1160" y="66" class="t" font-size="30" font-weight="800" fill="url(#gold)" text-anchor="end">{karachi["t"]:.0f}°C</text>')
         b.append(text(1160, 92, f"Karachi now · {karachi['desc']}", 13, PLAT, 600, "end"))
     b.append(f'<text x="1160" y="124" class="m" font-size="11" fill="{MUTED}" text-anchor="end" letter-spacing="1">UPDATED {stamp(now)} · EVERY 6 H</text>')
-    b.append(guilloche(212, 760, 126, 4))
-    return frame(W, H, "gr", "".join(b), SEAL_DEFS)
+    b.append(rule(212, 760, 126))
+    return lift(frame(W, H, "gr", "".join(b)))
 
 
 def sparkline(x, y, w, h, temps, precs, k):
@@ -160,9 +161,9 @@ def weather_card(data, host, now):
     H = Y0 + RH * len(CITIES) + 70
     b = []
     b.append(f'<circle cx="62" cy="52" r="7" fill="#FF4D4D"><animate attributeName="opacity" values="1;.25;1" dur="2s" repeatCount="indefinite"/></circle>')
-    b.append(text(80, 58, "LIVE FROM HEATFLOOD SENTINEL", 15, G1, 800, extra='letter-spacing="3"'))
+    b.append(text(80, 58, "LIVE FROM HEATFLOOD SENTINEL", 14, G1, 800, extra='letter-spacing="3"'))
     b.append(text(48, 86, f"Current conditions and the next 24 hours across five cities · refreshed every 6 hours · updated {stamp(now)}", 13.5, MUTED, 400, extra='font-style="italic"'))
-    b.append(eye(1150, 54, 30))
+    b.append(alpha_mark(1140, 56, .3, node=True))
     cols = [(48, "CITY"), (300, "NOW"), (420, "HUMIDITY"), (540, "RAIN NOW"), (668, "NEXT 24 H  ·  °C RANGE"), (858, "NEXT 24 H  ·  TEMPERATURE / RAIN")]
     for x, lab in cols:
         b.append(text(x, Y0 - 18, lab, 10.5, PLAT, 700, cls="m", extra='letter-spacing="1.5" fill-opacity=".7"'))
@@ -174,7 +175,7 @@ def weather_card(data, host, now):
         cur = c["current"]
         temps, precs, _ = next24(c)
         b.append(text(48, y + 32, name, 18, "#FFFFFF", 700))
-        b.append(text(48, y + 52, f"{lat:.2f}° N · {lon:.2f}° E", 11, MUTED, 400, cls="m"))
+        b.append(text(48, y + 52, REGION.get(name, "Pakistan"), 11.5, MUTED, 400))
         t = cur["temperature_2m"]
         tc = G3 if t >= 40 else (G2 if t >= 30 else PLAT)
         b.append(f'<text x="300" y="{y+44}" class="t" font-size="26" font-weight="800" fill="{tc}">{t:.1f}<tspan font-size="14" font-weight="600" fill="{PLAT}"> °C</tspan></text>')
@@ -192,17 +193,16 @@ def weather_card(data, host, now):
     b.append(f'<line x1="858" y1="{Y0}" x2="858" y2="{yb}" stroke="#FFF3C4" stroke-opacity=".25"><animateTransform attributeName="transform" type="translate" values="0 0;290 0;290 0" keyTimes="0;.6;1" dur="10s" repeatCount="indefinite"/></line>')
     b.append(f'<line x1="40" y1="{yb+14}" x2="1160" y2="{yb+14}" stroke="{LINE}"/>')
     b.append(text(48, yb + 42, "Weather data by Open-Meteo.com (CC BY 4.0) · hourly model forecast, Asia/Karachi time", 12, MUTED, 400))
-    b.append(text(1152, yb + 42, f"MS thesis · NED UET · {COORDS}", 12, MUTED, 400, "end", cls="m"))
+    b.append(text(1152, yb + 42, "MS thesis · NED UET", 12, MUTED, 400, "end", extra='font-style="italic"'))
     extra = f'<linearGradient id="spk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{G1}" stop-opacity=".55"/><stop offset="1" stop-color="{G1}" stop-opacity="0"/></linearGradient>'
-    return frame(W, H, "wx", "".join(b), SEAL_DEFS + extra)
+    return lift(frame(W, H, "wx", "".join(b), extra))
 
 
 def github_card(user, repos, days, now):
     W, H = 1200, 400
     b = []
-    b.append(text(48, 56, "LIVE GITHUB ACTIVITY", 15, G1, 800, extra='letter-spacing="3"'))
-    b.append(text(48, 82, f"Public data for @{USER} from the GitHub API · updated {stamp(now)}", 13.5, MUTED, 400, extra='font-style="italic"'))
-    b.append(eye(1150, 54, 30))
+    b.append(head(48, 56, "LIVE GITHUB ACTIVITY", f"Public data for @{USER} from the GitHub API · updated {stamp(now)}"))
+    b.append(alpha_mark(1140, 56, .3, node=True))
     total30 = sum(days.values())
     since = dt.datetime.fromisoformat(user["created_at"].replace("Z", "+00:00")).astimezone(PKT)
     last_push = max((r.get("pushed_at") or "" for r in repos), default="")
@@ -254,7 +254,7 @@ def github_card(user, repos, days, now):
     if not own:
         b.append(text(rx, cy0 + 56, "No public repositories yet.", 13, MUTED, 400))
     b.append(text(48, 370, "Counts are public data only; private work is not shown.", 12, MUTED, 400, extra='font-style="italic"'))
-    return frame(W, H, "gh", "".join(b), SEAL_DEFS)
+    return lift(frame(W, H, "gh", "".join(b)))
 
 
 # ------------------------------------------------------------------ main
@@ -293,7 +293,7 @@ def main():
         status["github"] = f"FAILED: {e}"
         keep_previous(a.out, "github-activity.svg")
     open(os.path.join(a.out, "greeting.svg"), "w").write(greeting_card(now, karachi))
-    open(os.path.join(a.out, "career-timeline.svg"), "w").write(gen.career_timeline_svg(now))
+    open(os.path.join(a.out, "career-timeline.svg"), "w").write(lift(gen.career_timeline_svg(now)))
     status["generated_at"] = now.isoformat()
     open(os.path.join(a.out, "status.json"), "w").write(json.dumps(status, indent=2))
     print(json.dumps(status, indent=2))
