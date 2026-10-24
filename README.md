@@ -27,7 +27,7 @@
 <img src="https://raw.githubusercontent.com/SirAseef/SirAseef/live/greeting.svg" width="100%" alt="Live greeting from Karachi, refreshed every 6 hours"/>
 
 <a name="about"></a>
-<img src="./assets/sec-about.svg" width="100%" alt="I · About Me"/>
+<img src="./assets/sec-about.svg" width="100%" alt="01 · About Me"/>
 
 I'm **Aseef Ahmed** — *Sir Aseef* to my students — **Founder of Alpha Group**, a **Software Engineer and Data Scientist** from **Karachi, Pakistan**, working where engineering, enterprise and education meet.
 
@@ -40,26 +40,26 @@ I'm **Aseef Ahmed** — *Sir Aseef* to my students — **Founder of Alpha Group*
 - 🎤 Trainer and motivational speaker — I lead a faculty team and supervise student eProjects in **PHP, MERN, Flutter, Big Data and AI**.
 
 <a name="alpha-group"></a>
-<img src="./assets/sec-alpha.svg" width="100%" alt="II · Alpha Group"/>
+<img src="./assets/sec-alpha.svg" width="100%" alt="02 · Alpha Group"/>
 
 <img src="./assets/alpha-group.svg" width="100%" alt="Alpha Group — software house founded and led by Aseef Ahmed: software development, data and AI solutions, and training"/>
 
 <a name="journey"></a>
-<img src="./assets/sec-journey.svg" width="100%" alt="III · Journey"/>
+<img src="./assets/sec-journey.svg" width="100%" alt="03 · Journey"/>
 
 <img src="./assets/journey.svg" width="100%" alt="Timeline: BS Software Engineering at SSUET 2019–2023; Associate Engineer Intern at Bank Alfalah Mar–Aug 2022; Software Engineer and Scrum Master at Contour Software since Jan 2023; Faculty Member at Aptech North Karachi Sep 2023–Dec 2024; Senior Manager Academics at Aptech Learning since Jan 2025; MS Data Science at NED UET since Nov 2025 (coursework complete, thesis in progress); now Founder of Alpha Group"/>
 
 <img src="https://raw.githubusercontent.com/SirAseef/SirAseef/live/career-timeline.svg" width="100%" alt="Animated career timeline 2019 to now: SSUET Dec 2019–Apr 2023; Bank Alfalah Mar–Aug 2022; Contour Software Jan 2023–present; Aptech North Karachi Sep 2023–Dec 2024; Aptech Learning Jan 2025–present; NED UET MS Data Science Nov 2025–present; Founder, Alpha Group"/>
 
 <a name="expertise"></a>
-<img src="./assets/sec-expertise.svg" width="100%" alt="IV · Expertise"/>
+<img src="./assets/sec-expertise.svg" width="100%" alt="04 · Expertise"/>
 
 <img src="./assets/expertise.svg" width="100%" alt="Expertise pillars: Data Science and AI; Data Engineering; Software Engineering; Analytics and BI; Teaching and Leadership"/>
 
 <img src="./assets/focus.svg" width="100%" alt="Focus areas: Data Science and AI; GenAI, LLMs, RAG and Agentic AI; Data Engineering and Big Data; Full-stack MERN and .NET; Analytics and BI; Teaching and Leadership — each with its tools"/>
 
 <a name="stack"></a>
-<img src="./assets/sec-stack.svg" width="100%" alt="V · Tech Arsenal"/>
+<img src="./assets/sec-stack.svg" width="100%" alt="05 · Tech Arsenal"/>
 
 <div align="center">
 
@@ -94,7 +94,7 @@ I'm **Aseef Ahmed** — *Sir Aseef* to my students — **Founder of Alpha Group*
 </div>
 
 <a name="projects"></a>
-<img src="./assets/sec-projects.svg" width="100%" alt="VI · Featured Work"/>
+<img src="./assets/sec-projects.svg" width="100%" alt="06 · Featured Work"/>
 
 <a href="https://github.com/SirAseef/heatflood-sentinel"><img src="./assets/featured-heatflood.svg" width="100%" alt="HeatFlood Sentinel — MS thesis: scalable Big Data and deep learning framework for heatwave and flash-flood forecasting and detection in Pakistan"/></a>
 
@@ -110,17 +110,17 @@ I'm **Aseef Ahmed** — *Sir Aseef* to my students — **Founder of Alpha Group*
 <img src="./assets/projects.svg" width="100%" alt="Selected builds: Earth Climate Agency (AI/ML, Flask, Big Data); Stock Market Prediction (ML); Fitness Tracker (MERN); Currency Converter (mobile); Brain Tumor Detection (ML, BS final-year project, graded A+)"/>
 
 <a name="achievements"></a>
-<img src="./assets/sec-achievements.svg" width="100%" alt="VII · Achievements"/>
+<img src="./assets/sec-achievements.svg" width="100%" alt="07 · Achievements"/>
 
 <img src="./assets/achievements.svg" width="100%" alt="TechWiz winners with students 2024 and 2025; Google AI Primer 2024; MERN Stack Trainer certification at Contour 2023; Java and JavaScript 300-hour certificates from SSUET"/>
 
 <a name="teaching"></a>
-<img src="./assets/sec-teaching.svg" width="100%" alt="VIII · Teaching & Mentorship"/>
+<img src="./assets/sec-teaching.svg" width="100%" alt="08 · Teaching & Mentorship"/>
 
 <img src="./assets/teaching.svg" width="100%" alt="What I teach: programming in any language, web and MERN, .NET Core and C#, mobile apps, AI/ML and GenAI, Big Data, data and BI, faculty training"/>
 
 <a name="analytics"></a>
-<img src="./assets/sec-analytics.svg" width="100%" alt="IX · GitHub Analytics"/>
+<img src="./assets/sec-analytics.svg" width="100%" alt="09 · GitHub Analytics"/>
 
 <img src="https://raw.githubusercontent.com/SirAseef/SirAseef/live/github-activity.svg" width="100%" alt="Live GitHub activity: public repositories, followers, commits in the last 30 days and latest repositories, refreshed every 6 hours"/>
 
