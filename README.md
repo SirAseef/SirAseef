@@ -119,6 +119,23 @@ I'm **Aseef Ahmed** — *Sir Aseef* to my students — **Founder of Alpha Group*
 
 <img src="./assets/teaching.svg" width="100%" alt="What I teach: programming in any language, web and MERN, .NET Core and C#, mobile apps, AI/ML and GenAI, Big Data, data and BI, faculty training"/>
 
+<a name="teaching-repos"></a>
+<div align="center">
+
+### 🦁 Teaching Repositories
+
+<sub>Open course material for my Aptech Learning classes — lectures, labs, assignments and projects · CC BY-NC 4.0</sub>
+
+<table>
+<tr><td align="center" width="50%"><a href="https://github.com/SirAseef/Diploma-in-AI"><img src="https://img.shields.io/badge/Diploma%20in%20AI-0B0B0F?style=for-the-badge&logo=github&logoColor=F5B301&labelColor=0B0B0F&color=0B0B0F" alt="Diploma in AI"/></a><br/><sub>Diploma in Artificial Intelligence · NLP, ML, Deep Learning, CV</sub></td><td align="center" width="50%"><a href="https://github.com/SirAseef/Diploma-in-Data-Science"><img src="https://img.shields.io/badge/Diploma%20in%20Data%20Science-0B0B0F?style=for-the-badge&logo=github&logoColor=F5B301&labelColor=0B0B0F&color=0B0B0F" alt="Diploma in Data Science"/></a><br/><sub>Python, statistics, Big Data, Power BI</sub></td></tr>
+<tr><td align="center" width="50%"><a href="https://github.com/SirAseef/Generative-AI"><img src="https://img.shields.io/badge/Generative%20AI-0B0B0F?style=for-the-badge&logo=github&logoColor=F5B301&labelColor=0B0B0F&color=0B0B0F" alt="Generative AI"/></a><br/><sub>Prompt engineering, LLM apps, RAG basics</sub></td><td align="center" width="50%"><a href="https://github.com/SirAseef/Cybersecurity-and-Digital-Forensics"><img src="https://img.shields.io/badge/Cyber%20Security%20%26%20Forensics-0B0B0F?style=for-the-badge&logo=github&logoColor=F5B301&labelColor=0B0B0F&color=0B0B0F" alt="Cyber Security & Forensics"/></a><br/><sub>Ethical hacking, threat hunting, forensics</sub></td></tr>
+<tr><td align="center" width="50%"><a href="https://github.com/SirAseef/Diploma-in-Digital-Marketing"><img src="https://img.shields.io/badge/Digital%20Marketing-0B0B0F?style=for-the-badge&logo=github&logoColor=F5B301&labelColor=0B0B0F&color=0B0B0F" alt="Digital Marketing"/></a><br/><sub>SEO, paid media, analytics, AI marketing</sub></td><td align="center" width="50%"><a href="https://github.com/SirAseef/Short-Term-Courses"><img src="https://img.shields.io/badge/Short--Term%20Courses-0B0B0F?style=for-the-badge&logo=github&logoColor=F5B301&labelColor=0B0B0F&color=0B0B0F" alt="Short-Term Courses"/></a><br/><sub>Smart Professional short courses</sub></td></tr>
+<tr><td align="center" width="50%"><a href="https://github.com/SirAseef/Interview-Assignments-Quiz"><img src="https://img.shields.io/badge/Interview%20%C2%B7%20Assignments%20%C2%B7%20Quiz-0B0B0F?style=for-the-badge&logo=github&logoColor=F5B301&labelColor=0B0B0F&color=0B0B0F" alt="Interview · Assignments · Quiz"/></a><br/><sub>Quizzes, assignments and interview prep</sub></td><td align="center" width="50%"><a href="https://github.com/SirAseef/AI-7144"><img src="https://img.shields.io/badge/AI%20%E2%80%94%20Batch%207144-0B0B0F?style=for-the-badge&logo=github&logoColor=F5B301&labelColor=0B0B0F&color=0B0B0F" alt="AI — Batch 7144"/></a><br/><sub>Batch class repository</sub></td></tr>
+<tr><td align="center" width="50%"><a href="https://github.com/SirAseef/New-Prime---7062"><img src="https://img.shields.io/badge/New%20Prime%20%E2%80%94%20Batch%207062-0B0B0F?style=for-the-badge&logo=github&logoColor=F5B301&labelColor=0B0B0F&color=0B0B0F" alt="New Prime — Batch 7062"/></a><br/><sub>Batch class repository</sub></td><td align="center" width="50%"><a href="https://github.com/SirAseef/Old-Prime---6740"><img src="https://img.shields.io/badge/Old%20Prime%20%E2%80%94%20Batch%206740-0B0B0F?style=for-the-badge&logo=github&logoColor=F5B301&labelColor=0B0B0F&color=0B0B0F" alt="Old Prime — Batch 6740"/></a><br/><sub>Batch class repository</sub></td></tr>
+</table>
+
+</div>
+
 <a name="analytics"></a>
 <img src="./assets/sec-analytics.svg" width="100%" alt="09 · GitHub Analytics"/>
 
